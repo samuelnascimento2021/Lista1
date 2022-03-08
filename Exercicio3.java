@@ -6,8 +6,8 @@ public class Exercicio3 {
 		
 		Scanner entrada = new Scanner (System.in);
 		
-		int cntVogal = 0;
-		String frase;
+		int cntVogais = 0;
+		String frase, vogais="";
 		
 		System.out.println("Insira sua frase");
 		frase = entrada.nextLine();
@@ -17,15 +17,26 @@ public class Exercicio3 {
 		for(int i=0; i < frase.length(); i++)
 			{
 				char c = frase.charAt(i);
-				if(c == 32) continue;
-				if(c == 97 | c == 101 | c==105 | c == 111 | c == 117)
-					{
-						cntVogal ++;
-						continue;
-					}
+				if(c == 'a' | c == 'e' | c=='i' | c == 'o' | c == 'u')
+				{
+					vogais = vogais + Character.toString(c);
+					System.out.println(vogais);
+				}
 			}
 		
-		System.out.println("Na frase \"" + frase + "\" temos: " + cntVogal + " vogais.");
+		if (vogais.contains("a"))
+          		cntVogais++;
+      		if (vogais.contains("e"))
+          		cntVogais++;
+      		if (vogais.contains("i"))
+        		cntVogais++;
+     		if (vogais.contains("o"))
+       		  	cntVogais++;
+      		if (vogais.contains("u"))
+         	   	cntVogais++;
+    
+    
+    		System.out.println("Na frase \"" + frase + "\" temos: " + cntVogais + " vogal(is).");
 	}
 
 }
