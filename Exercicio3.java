@@ -20,7 +20,6 @@ public class Exercicio3 {
 				if(c == 'a' | c == 'e' | c=='i' | c == 'o' | c == 'u')
 				{
 					vogais = vogais + Character.toString(c);
-					System.out.println(vogais);
 				}
 			}
 		
